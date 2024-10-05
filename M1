@@ -1,41 +1,20 @@
 def random_ua():
-    model = "iPhone"+str(random.randint(4,16))+','+str(random.randint(1,9))
-    abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z']
-    build = str(random.randint(9,19))+random.choice(abc)+str(random.randint(50,199))
-    fbsv = str(random.randint(4,16))+'_'+str(random.randint(1,9))+'_'+str(random.randint(1,9))
-    ua1 = 'Mozilla/5.0 (iPhone, CPU iPhone '+fbsv+' like Mac OS '+str(random.randint(8,16))+') AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/'+build+') Safari/604.1'
-    ua2 = "Mozilla/5.0 (iPhone "+str(random.randrange(4,6))+" X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/"+str(random.randint(4,13))+".1.1 Mobile/"+model+" Safari/604.1"
-    dv_typ = random.choice(['SM-S911B','SM-S908B','SM-G998B','SM-G988B','SM-G973B','SM-N986B'])
-    ua3 = f"Mozilla/5.0 (Linux; Android {str(random.randint(4,13))}; "+dv_typ+") AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36"
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['RMX3686','RMX3393','RMX3081','RMX2170','RMX2061','RMX2020'])
-    bl_typ = random.choice(['QP1A','SKQ1','TP1A','RKQ1','SP1A','RP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua4 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['SM-S911B','SM-S908B','SM-G998B','SM-G988B','SM-G973B','SM-N986B'])
-    bl_typ = random.choice(['PPR1','LRX21T','TP1A','RKQ1','SP1A','RP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua5 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['vivo 1951','vivo 1918','V2011A','V2047','V2145','V2227A','V2160'])
-    bl_typ = random.choice(['RP1A','PKQ1','QP1A','TP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua6 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    ua = random.choice([ua1,ua2,ua3,ua4,ua5,ua6])
-    return(ua)
+    Lenovo = "[FBAN/FB4A;FBAV/66.0.0.33.73;FBBV/23966410;FBDM/"+"{density=1.0,width=1280,height=752}"+";FBLC/sv_SE;FBCR/Tele2;FBMF/LENOVO;FBBD/Lenovo;FBPN/com.facebook.katana;FBDV/Lenovo TB2-X30L;FBSV/5.1.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Nokia = "[FBAN/FB4A;FBAV/221.0.0.48.102;FBBV/154683426;FBDM/"+"{density=2.0,width=720,height=1280}"+";FBLC/en_US;FBRV/0;FBCR/VodaCom-SA;FBMF/HMD Global;FBBD/Nokia;FBPN/com.facebook.katana;FBDV/TA-1024;FBSV/9;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Lge = "[FBAN/FB4A;FBAV/151.0.0.44.205;FBBV/81374851;FBDM/"+"{density=2.0,width=720,height=1187}"+";FBLC/pt_PT;FBRV/82651122;FBCR/MEO;FBMF/LGE;FBBD/lge;FBPN/com.facebook.katana;FBDV/LG-H502;FBSV/6.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Realme = "[FBAN/FB4A;FBAV/266.0.0.56.124;FBBV/209027753;FBDM/"+"{density=2.0,width=720,height=1412}"+";FBLC/en_US;FBRV/0;FBCR/Jio 4G;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/RMX1945;FBSV/9;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Xiaomi = "[FBAN/FB4A;FBAV/279.0.0.43.120;FBBV/231021012;FBDM/"+"{density=2.0,width=720,height=1344}"+";FBLC/en_US;FBRV/232621700;FBCR/ZZ;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/Redmi 7A;FBSV/9;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Oppo = "[FBAN/FB4A;FBAV/280.0.0.48.122;FBBV/233235247;FBDM/"+"{density=3.0,width=1080,height=2132}"+";FBLC/en_US;FBRV/235412020;FBCR/airtel;FBMF/OPPO;FBBD/OPPO;FBPN/com.facebook.katana;FBDV/CPH1893;FBSV/9;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Vivo = "[FBAN/FB4A;FBAV/279.0.0.43.120;FBBV/231021068;FBDM/"+"{density=3.0,width=1080,height=2141}"+";FBLC/en_US;FBRV/0;FBCR/Vodafone IN;FBMF/vivo;FBBD/vivo;FBPN/com.facebook.katana;FBDV/vivo 1907;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]"
+    Huawei = "[FBAN/FB4A;FBAV/88.0.0.22.76;FBBV/35266889;FBDM/"+"{density=1.5,width=480,height=800}"+";FBLC/fr_FR;FBCR/TUNTEL;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/HUAWEI Y336-U02;FBSV/4.4.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Infinix = "[FBAN/MessengerLite;FBAV/288.0.0.5.115;FBPN/com.facebook.mlite;FBLC/en_US;FBBV/346850586;FBCR/TNT;FBMF/INFINIX MOBILITY LIMITED;FBBD/Infinix;FBDV/Infinix X688B;FBSV/10;FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1472}"+";]"
+    Tecno = "[FBAN/FB4A;FBAV/379.0.0.24.109;FBBV/389395368;FBDM/"+"{density=2.0,width=720,height=1440}"+";FBLC/ru_RU;FBRV/391413024;FBCR/;FBMF/TECNO MOBILE LIMITED;FBBD/TECNO;FBPN/com.facebook.katana;FBDV/TECNO KE5;FBSV/10;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    Sony = "[FBAN/FB4A;FBAV/440.0.0.31.105;FBBV/534746244;FBDM/"+"{density=2.8875,width=1096,height=2421}"+";FBLC/en_US;FBRV/536876792;FBCR/SmarTone HK;FBMF/Sony;FBBD/Sony;FBPN/com.facebook.katana;FBDV/J9110;FBSV/11;FBOP/19;FBCA/arm64-v8a:;]"
+    Htc = "[FBAN/FB4A;FBAV/78.0.0.16.67;FBBV/30529747;FBDM/"+"{density=3.0,width=1080,height=1776}"+";FBLC/en_US;FBCR/;FBMF/HTC;FBBD/htc;FBPN/com.facebook.katana;FBDV/HTC One_E8;FBSV/4.4.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+    OnePlus = "[FBAN/FB4A;FBAV/278.0.0.51.119;FBBV/229281782;FBDM/"+"{density=2.625,width=1080,height=2075}"+";FBLC/en_US;FBRV/230624390;FBCR/Bite;FBMF/OnePlus;FBBD/OnePlus;FBPN/com.facebook.katana;FBDV/ONEPLUS A6003;FBSV/10;FBOP/1;FBCA/arm64-v8a:;]"
+    Motorola = "[FBAN/FB4A;FBAV/279.0.0.43.120;FBBV/231021068;FBDM/"+"{density=3.0,width=1080,height=2120}"+";FBLC/en_US;FBRV/232922869;FBCR/Verizon ;FBMF/motorola;FBBD/motorola;FBPN/com.facebook.katana;FBDV/moto z4;FBSV/10;FBOP/1;FBCA/arm64-v8a:;]"
+    Google = "[FBAN/FB4A;FBAV/281.0.0.36.124;FBBV/234741974;FBDM/"+"{density=2.75,width=1080,height=2088}"+";FBLC/en_US;FBRV/236912743;FBCR/Google Fi;FBMF/Google;FBBD/google;FBPN/com.facebook.katana;FBDV/Pixel 3a;FBSV/10;FBOP/1;FBCA/arm64-v8a:;]"
+    IPhone = "[FBAN/MessengerLiteForiOS;FBAV/283.0.0.43.118;FBBV/246076817;FBDV/iPhone11,8;FBMD/iPhone;FBSN/iOS;FBSV/13.7;FBSS/2;FBCR/;FBID/phone;FBLC/en;FBOP/0]"
+    END = random.choice([Lenovo,Nokia,Lge,Realme,Xiaomi,Oppo,Vivo,Huawei,Infinix,Tecno,Sony,Htc,OnePlus,Motorola,Google])
+    ua = "[FBAN/FB4A;FBAV/"+str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77))+";FBBV/"+str(random.randint(1111111,7777777))+";"+END
+    return ua
