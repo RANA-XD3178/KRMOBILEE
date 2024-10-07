@@ -1,4 +1,4 @@
-def X1():
+def random_ua():
     Lenovo = "[FBAN/FB4A;FBAV/159.0.0.38.95;FBBV/91889140;FBDM/"+"{density=1.0,width=1280,height=752}"+";FBLC/pt_PT;FBRV/92233038;FBCR/;FBMF/LENOVO;FBBD/Lenovo;FBPN/com.facebook.katana;FBDV/Lenovo TB-X103F;FBSV/6.0.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
     Nokia = "[FBAN/FB4A;FBAV/153.0.0.54.88;FBBV/84570982;FBDM/"+"{density=2.0,width=720,height=1280}"+";FBLC/pt_PT;FBRV/85070460;FBCR/vodafone P;FBMF/HMD Global;FBBD/Nokia;FBPN/com.facebook.katana;FBDV/TA-1020;FBSV/7.1.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
     Lge = "[FBAN/FB4A;FBAV/153.0.0.54.88;FBBV/84570982;FBDM/"+"{density=2.0,width=720,height=1187}"+";FBLC/pt_PT;FBRV/85070460;FBCR/MEO;FBMF/LGE;FBBD/lge;FBPN/com.facebook.katana;FBDV/LG-K350;FBSV/6.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
